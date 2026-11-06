@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NBA Player Stats Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <div><p class="eyebrow">LAB 05 · DOM API & EVENTS</p><h1>NBA Player Stats Dashboard</h1><p class="subtitle">Explore player statistics by searching and filtering the table.</p></div>
+      <button id="darkModeToggle" type="button" aria-pressed="false">Dark Mode</button>
+    </header>
+    <section class="summary" aria-label="Dashboard overview">
+      <div class="stat"><span>Total Players</span><strong id="totalPlayers">0</strong></div>
+      <div class="stat"><span>Players Shown</span><strong id="shownPlayers">0</strong></div>
+      <div class="stat"><span>Teams Shown</span><strong id="shownTeams">0</strong></div>
+    </section>
+    <section class="panel">
+      <div class="filters">
+        <label>Search Player<input id="searchInput" type="search" placeholder="Search by player name..."></label>
+        <label>Filter by Team<select id="teamFilter"><option value="all">All Teams</option></select></label>
+        <label>Filter by Position<select id="positionFilter"><option value="all">All Positions</option></select></label>
+      </div>
+      <div class="table-wrap"><table><thead><tr><th>Player</th><th>Team</th><th>Position</th><th>Games</th><th>PPG</th><th>RPG</th><th>APG</th></tr></thead><tbody id="playersTableBody"></tbody></table></div>
+      <p id="emptyMessage" class="empty" hidden>No players match your search or filters.</p>
+    </section>
+    <footer>Sample player statistics for DOM practice; not live NBA data.</footer>
+  </main>
+</body>
+</html>
